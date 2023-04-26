@@ -28,7 +28,7 @@ class Program
             smolNum = item;
            }
         }
-        int average = sum / numbers.Count;
+        float average = sum / numbers.Count;
         Console.WriteLine($"The sum is: {sum}");
         Console.WriteLine($"The Average is: {average}");
         Console.WriteLine($"The Largest number is: {bigNum}");

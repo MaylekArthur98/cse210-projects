@@ -18,7 +18,7 @@ class Program
         int smolNum = 0;
         foreach (var item in numbers)
         {
-           sum += number; 
+           sum += item; 
            if (item > bigNum)
            {
             bigNum = item;

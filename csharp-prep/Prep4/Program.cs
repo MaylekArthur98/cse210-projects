@@ -16,9 +16,15 @@ class Program
         int sum = 0;
         int bigNum = 0;
         int smolNum = 0;
+        int compNum = 2147483647;
+        int posNum = -1;
         foreach (var item in numbers)
         {
            sum += item; 
+           if (item <= compNum && item > 0)
+            {
+            compNum = item;
+            }
            if (item > bigNum)
            {
             bigNum = item;
@@ -28,12 +34,21 @@ class Program
             smolNum = item;
            }
         }
+        posNum = compNum;
+        if (posNum == -1 && posNum != 2147483647)
+        {
+            Console.WriteLine("Error, there was no positive number input by user.");
+        }
+        else 
+        {
+            Console.WriteLine($"The smallest positive number is: {posNum}");
+        }
         float average = sum / numbers.Count;
+        
         Console.WriteLine($"The sum is: {sum}");
         Console.WriteLine($"The Average is: {average}");
         Console.WriteLine($"The Largest number is: {bigNum}");
         Console.WriteLine($"The Smallest number is: {smolNum}");
-
     }
     
 }

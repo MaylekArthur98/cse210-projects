@@ -14,6 +14,7 @@ class Program
             numbers.Add(number);
         }
         int sum = 0;
+        
         int bigNum = 0;
         int smolNum = 0;
         int compNum = 2147483647;
